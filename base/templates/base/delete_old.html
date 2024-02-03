@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <p>Etes-vous sur(e) de vouloir supprimer "{{ obj }}"?</p>
+
+        <a href="{% url 'home' %}">Retour</a>
+        <input type="submit" value="Confirm">
+    </form>
+{% endblock content %}
